@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIMainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Left")]
+    [SerializeField] private TextMeshProUGUI name;
+    [SerializeField] private TextMeshProUGUI currentLv;
+    [SerializeField] private Image lvBar;
+    [SerializeField] private TextMeshProUGUI lvText;
+    [SerializeField] private TextMeshProUGUI discription;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Header("Right")]
+    [SerializeField] private TextMeshProUGUI gold;
+    [SerializeField] private Button status;
+    [SerializeField] private Button inventory;
 }
