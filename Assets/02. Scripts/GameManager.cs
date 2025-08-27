@@ -32,5 +32,9 @@ public class GameManager : MonoBehaviour
 
         UIManager.Instance.UIMainMenu.CharacterInfo(Player);
         UIManager.Instance.UIStatus.CharacterStatusInfo(Player);
+
+        Item sword = new Item("Ä®", 5, 0, 0, 2);
+        Item shield= new Item("¹æÆÐ", 0, 5, 10, 0);
+        Item shabbyClothes= new Item("Çã¸§ÇÑ ¿Ê", 0, 2, 5, 0);
     }
 }

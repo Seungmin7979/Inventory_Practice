@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +20,7 @@ public class UIInventory : MonoBehaviour
 
     public void InitInventoryUI()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < slots.Count; i++)
         {
             UISlot newslot = Instantiate(uiSlot, slotParent);
 
