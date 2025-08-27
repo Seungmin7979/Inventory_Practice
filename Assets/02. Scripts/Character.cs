@@ -11,7 +11,7 @@ public class Character
     public int hp { get; private set; }
     public int cri { get; private set; }
 
-    public List<Item> Inventory;
+    public List<Item> inventory;
 
     public Character (string name, int lv, int gold, int atk, int def, int hp, int cri) 
     {
@@ -23,12 +23,12 @@ public class Character
         this.hp = hp;
         this.cri = cri;
 
-        this.Inventory = new List<Item>();
+        this.inventory = new List<Item>();
     }
     
     public void Additem(Item item)
     {
-        Inventory.Add(item);
+        inventory.Add(item);
     }
 
     public void Equip(Item item)

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -12,19 +13,23 @@ public class UIInventory : MonoBehaviour
     [SerializeField] private Transform slotParent;
 
     private List<UISlot> slots = new List<UISlot>();
+    public Character character { get { return GameManager.Instance.player; } }
 
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return new WaitUntil(() => character.inventory.Count > 0);
+
         InitInventoryUI();
     }
 
     public void InitInventoryUI()
     {
-        for (int i = 0; i < slots.Count; i++)
+        for (int i = 0; i < character.inventory.Count; i++)
         {
             UISlot newslot = Instantiate(uiSlot, slotParent);
 
             slots.Add(newslot);
+            Debug.Log("гоюл");
         }
     }
 

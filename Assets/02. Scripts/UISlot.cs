@@ -8,7 +8,7 @@ public class UISlot : MonoBehaviour
 
     public void SetItem()
     {
-
+        
     }
 
     public void RefreshUI()
