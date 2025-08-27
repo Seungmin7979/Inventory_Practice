@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UISlot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Image itemImage;
+
+
+    public void SetItem()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RefreshUI()
     {
-        
+
     }
 }
