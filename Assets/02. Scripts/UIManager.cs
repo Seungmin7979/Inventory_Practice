@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager Instance;
+    public static UIManager Instance { get; private set; }
 
     [SerializeField] private UIMainMenu uiMainMenu;
     [SerializeField] private UIStatus uiStatus;
     [SerializeField] private UIInventory uiInventory;
+
+    public UIMainMenu UIMainMenu => uiMainMenu;
+    public UIStatus UIStatus => uiStatus;
+    public UIInventory UIInventory => uiInventory;
 
     private void Awake()
     {
@@ -18,7 +22,7 @@ public class UIManager : MonoBehaviour
 
         else
         {
-            DontDestroyOnLoad(gameObject);
+            Destroy(gameObject);
         }
     }
 }

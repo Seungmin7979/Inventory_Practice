@@ -1,15 +1,15 @@
 [System.Serializable]
-public class Character
+public class Character 
 {
-    public string name;
-    public int lv;
-    public int gold;
-    public int atk;
-    public int def;
-    public int hp;
-    public int cri;
+    public string name { get; private set; }
+    public int lv { get; private set; }
+    public int gold { get; private set; }
+    public int atk { get; private set; }
+    public int def { get; private set; }
+    public int hp { get; private set; }
+    public int cri { get; private set; }
 
-    public Character (string name, int lv, int gold, int atk, int def, int hp, int cri)
+    public Character (string name, int lv, int gold, int atk, int def, int hp, int cri) 
     {
         this.name = name;
         this.lv = lv;
