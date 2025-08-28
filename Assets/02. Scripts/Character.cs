@@ -36,6 +36,10 @@ public class Character
         if (item.isEquipped == false)
         { 
             item.isEquipped = true;
+            atk += item.addAtk;
+            def += item.addDef;
+            hp += item.addHp;
+            cri += item.addCri;
         }
     }
 
@@ -44,6 +48,10 @@ public class Character
         if (item.isEquipped == true)
         {
             item.isEquipped = false;
+            atk -= item.addAtk;
+            def -= item.addDef;
+            hp -= item.addHp;
+            cri -= item.addCri;
         }
     }
 }

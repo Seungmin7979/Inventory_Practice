@@ -40,5 +40,6 @@ public class GameManager : MonoBehaviour
         player.Additem(sword);
         player.Additem(shield);
         player.Additem(shabbyClothes);
+        // 아이템 불변하는 정보 // 보유하고 있는 데이터 나누기 (itemlist) id생성 필요 // 슬롯에 어떤 아이템 데이터를 보여주고 있는지 표시
     }
 }

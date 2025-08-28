@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UIInventory : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI inventoryCountText;
+    [SerializeField] private GameObject buttons;
     [SerializeField] private Button backButton;
 
     [SerializeField] private UISlot uiSlot;
@@ -17,6 +18,8 @@ public class UIInventory : MonoBehaviour
 
     private IEnumerator Start()
     {
+        backButton.onClick.AddListener(BackButton);
+
         yield return new WaitUntil(() => character.inventory.Count > 0);
 
         InitInventoryUI();
@@ -27,10 +30,16 @@ public class UIInventory : MonoBehaviour
         for (int i = 0; i < character.inventory.Count; i++)
         {
             UISlot newslot = Instantiate(uiSlot, slotParent);
-
+            newslot.SetItem(character.inventory[i]);
             slots.Add(newslot);
             Debug.Log("гоюл");
         }
     }
 
+
+    public void BackButton()
+    {
+        gameObject.SetActive(false);
+        buttons.SetActive(true);
+    }
 }
